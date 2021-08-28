@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gettext_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorPrimary">
+
+    <EditText
+        android:id="@+id/text_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/border2"
+        android:gravity="center"
+        android:hint="متن خود را بنویسید"
+        android:maxLines="5"
+        android:textColor="@color/text_selected"
+        android:textColorHint="@color/text_selected"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/submit_text"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:src="@drawable/ic_done"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:background="@color/colorPrimary">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:text="ذخیره"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_save"
+            app:iconGravity="end"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_insert_photo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="برای انتخاب پس زمینه کلیک کنید"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/vg_canvas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="h,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:id="@+id/imagebackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ir.shojaei.picview.DrawView
+                android:id="@+id/drawer_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:background="@color/tab_layout_background"
+            app:tabTextColor="@color/text_unselected"
+            app:tabSelectedTextColor="@color/text_selected"
+            app:tabTextAppearance="?android:textAppearanceMedium"
+            app:tabIndicatorHeight="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/view_pager"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabMode="fixed" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- set get color layout -->
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/getcolor_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                app:behavior_hideable="true"
+                app:behavior_peekHeight="0dp"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+                <LinearLayout
+                    android:id="@+id/showcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/close_getcolor"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/set_text_color_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/showcolor"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/border3"
+                    android:padding="10dp"
+                    android:text="انتخاب به عنوان رنگ متن"
+                    android:textColor="@color/text_selected" />
+
+                <ImageView
+                    android:id="@+id/close_getcolor"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_close" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/draw_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                app:behavior_hideable="true"
+                app:behavior_peekHeight="0dp"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/brush_width_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:value="8"
+                    android:valueFrom="0"
+                    android:stepSize="1"
+                    android:valueTo="100"
+                    app:tickVisible="false"
+                    app:thumbColor="@color/colorSecondary"
+                    app:trackColorActive="@color/colorSecondary" />
+
+                <ImageView
+                    android:id="@+id/set_drawing_color_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/brush_width_slider"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_color"
+                    android:textColor="@color/text_selected" />
+
+                <ImageView
+                    android:id="@+id/set_drawing_brush_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/brush_width_slider"
+                    android:layout_marginTop="16dp"
+                    android:layout_toStartOf="@id/set_drawing_color_btn"
+                    android:background="@drawable/drawer_active_item_background"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_brush"
+                    android:textColor="@color/text_selected" />
+
+                <ImageView
+                    android:id="@+id/set_drawing_eraser_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/brush_width_slider"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@id/set_drawing_color_btn"
+                    android:src="@drawable/eraser"
+                    android:padding="4dp"
+                    android:textColor="@color/text_selected" />
+
+                <ImageView
+                    android:id="@+id/close_drawing"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_close" />
+
+            </RelativeLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

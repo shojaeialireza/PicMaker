@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item>
+        <shape>
+             <gradient
+                android:startColor="@color/tab_layout_background"
+                android:endColor="@color/tab_layout_background"
+           />
+
+            <corners
+                android:radius="4dp" />
+        </shape>
+    </item>
+</selector>

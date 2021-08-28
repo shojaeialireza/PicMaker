@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#141817</color>
+    <color name="colorPrimaryDark">#141817</color>
+    <color name="colorSecondary">#FF4081</color>
+    <color name="tab_layout_background">#232728</color>
+    <color name="text_unselected">#828385</color>
+    <color name="text_selected">#FFFFFF</color>
+    <color name="text_color">#a8ffffff</color>
+
+    <!--filter-->
+    <color name="filter1">#248c4507</color>
+    <color name="filter2">#2Cff0d00</color>
+    <color name="filter3">#2C002aff</color>
+    <color name="filter4">#2C0a23a1</color>
+    <color name="filter5">#2C18b400</color>
+    <color name="filter6">#2Cffe100</color>
+    <color name="filter7">#2Cc552ff</color>
+    <color name="filter8">#2C00ff6f</color>
+    <color name="filter9">#2C00ffd9</color>
+    <color name="filter10">#2C002fff</color>
+    <color name="filter11">#2Cff00f7</color>
+    <color name="filter12">#2C000970</color>
+    <color name="filter13">#2Cab7f22</color>
+    <color name="filter14">#2C06ba00</color>
+    <color name="filter15">#2Cc767ff</color>
+    <color name="filter16">#2C5a018e</color>
+    <color name="filter17">#2Cbc0003</color>
+    <color name="filter18">#2CFFFFFF</color>
+</resources>

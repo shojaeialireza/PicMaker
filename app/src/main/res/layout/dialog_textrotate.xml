@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_rotatex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:valueTo="360"
+        android:stepSize="1"
+        app:tickVisible="false"
+        app:thumbColor="@color/colorSecondary"
+        app:trackColorActive="@color/colorSecondary" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_rotatey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:stepSize="1"
+        android:valueTo="360"
+        app:tickVisible="false"
+        app:thumbColor="@color/colorSecondary"
+        app:trackColorActive="@color/colorSecondary"/>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_rotatexy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:stepSize="1"
+        android:valueTo="360"
+        app:tickVisible="false"
+        app:thumbColor="@color/colorSecondary"
+        app:trackColorActive="@color/colorSecondary"/>
+</LinearLayout>
