@@ -72,7 +72,7 @@
                 android:scaleType="fitXY" />
 
             <ir.shojaei.picview.DrawView
-                android:id="@+id/drawer_view"
+                android:id="@+id/draw_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 

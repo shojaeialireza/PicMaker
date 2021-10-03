@@ -23,5 +23,23 @@ class ImageFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.setimage.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_getimage, MyFlags.BACKGROUND)
+        }
+        binding.seteffect.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_effect, null)
+        }
+        binding.addImg.setOnClickListener {
+            (activity as MainActivity).addImage()
+        }
+        binding.moveImg.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_move, MyFlags.IMAGE)
+        }
+        binding.setopacityimage.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_opacity, MyFlags.IMAGE)
+        }
+        binding.brushImg.setOnClickListener {
+            (activity as MainActivity).startDrawing()
+        }
     }
 }

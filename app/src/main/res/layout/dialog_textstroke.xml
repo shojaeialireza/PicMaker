@@ -25,12 +25,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:stepSize="1"
         android:valueTo="75"
-        app:tickVisible="false"
         app:thumbColor="@color/colorSecondary"
-        app:trackColorActive="@color/colorSecondary"/>
+        app:tickVisible="false"
+        app:trackColorActive="@color/colorSecondary" />
 
 
 </RelativeLayout>

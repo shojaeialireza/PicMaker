@@ -22,6 +22,50 @@ class TextFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.newText.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_gettext, MyFlags.ADD_TEXT)
+        }
+        binding.editText.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_gettext, MyFlags.EDIT_TEXT)
+        }
+        binding.textColor.setOnClickListener {
+            (activity as MainActivity).showColorPickerDialog(MyFlags.TEXT_COLOR)
+        }
+        binding.textSize.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_textsize, null)
+        }
+        binding.fontPer.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_font, MyFlags.PER_FONT)
+        }
+        binding.fontEng.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_font, MyFlags.ENG_FONT)
+        }
+        binding.textGradient.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_gradient, null)
+        }
+        binding.textRotate.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_textrotate, null)
+        }
+        binding.textMove.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_move, null)
+        }
+        binding.colorPicker.setOnClickListener {
+            (activity as MainActivity).startColorPicker()
+        }
+        binding.textStroke.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_textstroke, MyFlags.STROKE_COLOR)
+        }
+        binding.textAlign.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_textalign, null)
+        }
+        binding.textShadow.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_textshadow, null)
+        }
+        binding.textOpacity.setOnClickListener {
+            (activity as MainActivity).showDialogPlus(R.layout.dialog_opacity, null)
+        }
+        binding.textCopy.setOnClickListener {
+            (activity as MainActivity).copyText()
+        }
     }
 }

@@ -27,7 +27,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:padding="5dp"
-        android:src="@drawable/ic_done"/>
+        android:src="@drawable/ic_done" />
 
 
 </RelativeLayout>
